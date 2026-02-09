@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  },
+  "name": "sopping",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohammadMHabibi/Sopping.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohammadMHabibi/Sopping/issues"
+  },
+  "homepage": "https://github.com/MohammadMHabibi/Sopping#readme",
+  "description": ""
+}

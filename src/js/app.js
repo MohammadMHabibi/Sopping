@@ -1,11 +1,11 @@
 const container = document.querySelector(".container")
-async function getproducts() {
+async function getproducts(url) {
   const response = await fetch("https://fakestoreapi.com/products");
   const data = await response.json();
   return-data;
   renderInUi(data, container);
 }
-getproducts();
+getproducts(url);
 function renderInUi(list, container) {
   container.innerHTML = " ";
   list.forEach((product) => {

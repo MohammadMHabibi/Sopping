@@ -10,7 +10,7 @@
     <header class="p-[10px] w-full h-[90vh] flex flex-col gap-[2px]">
       <nav class="bg-kenari w-full h-[8vh] rounded-lg flex">
         <ul class="flex flex-row items-center gap-[45px] p-2">
-          <li class="text-[#ffffff] font-bold"><a href="">JS cloth shop</a></li>
+          <li class="text-[#ffffff] font-bold"><a href="#">JS cloth shop</a></li>
           <li class="text-[13px] text-[#ffffff]"><a href="#">Home</a></li>
           <li class="text-[13px] text-[#ffffff]"><a href="#">Products</a></li>
           <li class="text-[13px] text-[#ffffff]"><a href="#">About</a></li>
@@ -34,12 +34,13 @@
             <li><a class="text-[#ffffff] text-[12px]" href="#">Log out</a></li>
           </ul>
         </div>
-        <div class="overflow-y-scroll rounded-lg w-[78vw] h-[79vh] bg-abiporang">
-          <div class="container"></div>
+        <div class="overflow-y-scroll rounded-lg w-full h-[79vh] bg-abiporang">
+          <div class="container flex flex-row flex-wrap gap-3 justify-center p-3"></div>
         </div>
       </main>
     </header>
-    <script src="./js/app.js" ></script>
+    <script type="module" src="./js/app.js" ></script>
+    <script type="module" src="./js/renderInUi.js" ></script>
+    <script type="module" src="./js/product.js"></script>
   </body>
 </html>
-

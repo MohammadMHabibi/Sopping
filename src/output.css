@@ -7,17 +7,9 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-200: oklch(92.4% 0.12 95.746);
-    --color-amber-950: oklch(27.9% 0.077 45.635);
-    --color-blue-600: oklch(54.6% 0.245 262.881);
-    --color-purple-600: oklch(55.8% 0.288 302.321);
     --spacing: 0.25rem;
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
-    --radius-3xl: 1.5rem;
-    --radius-4xl: 2rem;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-background-color: #d8d8d8;
@@ -195,9 +187,6 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .h-\[6vh\] {
     height: 6vh;
   }
@@ -210,26 +199,26 @@
   .h-\[90vh\] {
     height: 90vh;
   }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-35 {
+    width: calc(var(--spacing) * 35);
+  }
   .w-\[16vw\] {
     width: 16vw;
   }
-  .w-\[78vw\] {
-    width: 78vw;
-  }
   .w-full {
     width: 100%;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
   }
   .flex-row {
     flex-direction: row;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -239,6 +228,9 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .gap-\[2px\] {
     gap: 2px;
@@ -291,6 +283,9 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
   .p-\[3px\] {
     padding: 3px;
   }
@@ -316,29 +311,9 @@
   .text-abiporang {
     color: var(--color-abiporang);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .transition-colors {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
-  }
-  .duration-500 {
-    --tw-duration: 500ms;
-    transition-duration: 500ms;
-  }
-  .duration-1000 {
-    --tw-duration: 1000ms;
-    transition-duration: 1000ms;
   }
   .hover\:-translate-y-2 {
     &:hover {
@@ -358,13 +333,6 @@
       }
     }
   }
-  .hover\:text-purple-600 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-purple-600);
-      }
-    }
-  }
   .hover\:shadow-\[0_12px_20px_rgba\(0\,0\,0\,0\.25\)\] {
     &:hover {
       @media (hover: hover) {
@@ -374,6 +342,9 @@
     }
   }
 }
+.box {
+  height: 40vh;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -382,11 +353,6 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -492,7 +458,6 @@
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-translate-x: 0;
       --tw-translate-y: 0;
